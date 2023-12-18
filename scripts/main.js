@@ -1,3 +1,4 @@
+console.log('Script is running!')
 const departments = {
     marketing: {
         description: "Marketing omvat verschillende strategieën en activiteiten gericht op het promoten van producten, diensten of merken bij het doelpubliek. Het omvat het begrijpen van de behoeften en voorkeuren van consumenten, het uitvoeren van marktonderzoek, het ontwikkelen van marketingplannen en het implementeren van tactieken om potentiële klanten te bereiken en te betrekken. Marketingprofessionals analyseren markttrends, identificeren doelmarkten en creëren overtuigende boodschappen en communicatiestrategieën om merkbekendheid op te bouwen, klantenwerving te stimuleren en klantloyaliteit te bevorderen",
@@ -72,3 +73,73 @@ const departments = {
 }
 
 console.log(departments);
+// //opdracht1a
+// console.log('De afdeling Sales heeft' + ' ' + [departments.sales.numberOfEmployees] + ' '  + 'medewerkers' + '.')
+// //opdracht1b
+// console.log('Marketing is een leuke afdeling om te werken.' + ' ' +  [departments.marketing.description] + '.')
+// //opdracht1c
+// console.log('De afdeling Customer Service heeft' + ' ' + [departments["customer-service"].numberOfEmployees] + ' ' + 'medewerkers' + '.')
+// //opdracht1d
+// console.log('Sales is een uitdagende afdeling om te werken als Verkoopmanager.' + ' ' + departments.sales.jobs[1].description)
+
+
+
+//opdracht 2a en opdracht2b
+const userInputOpdracht2 = prompt('Over welke afdeling wil je meer informatie? Kies uit:' + '[marketing / sales / customer-service]');
+console.log(userInputOpdracht2);
+
+console.log('Begin of switch for opdracht2')
+switch (userInputOpdracht2) {
+    case 'marketing':
+        console.log('Je koos' + ' ' + userInputOpdracht2 + '. ' + departments[userInputOpdracht2].description)
+        break
+    case 'sales':
+        console.log('Je koos' + ' ' + userInputOpdracht2 + '. ' + departments[userInputOpdracht2].description)
+        break
+    case 'customer-service':
+        console.log('Je koos' + ' ' + userInputOpdracht2 + '. ' + departments[userInputOpdracht2].description)
+        break
+
+//opdracht2c
+    default:
+        console.error('Hmm, ik heb geen geldige keuze van je ontvangen. Klopt dat? Probeer maar eens opnieuw. Je mag opgeven: [marketing / sales / customer-service]. Ververs de pagina maar.')
+}
+console.log('End of switch for opdracht 2')
+
+
+console.log('Begin of switch for opdracht3')
+
+
+
+let userInputOpdracht3;
+let userInputAnswerOpdracht3 = prompt('Je koos' + ' ' +  userInputOpdracht2 + '.' + ' ' +  'Over welke functie wil je meer weten? Voer een getal in tussen 0 en 3:\n\n' + '0:' + departments[userInputOpdracht2].jobs[0].title + '\n' + '1:' + departments[userInputOpdracht2].jobs[1].title + '\n' + '2:' + departments[userInputOpdracht2].jobs[2].title + '\n' + '3:' + departments[userInputOpdracht2].jobs[3].title);
+switch(userInputAnswerOpdracht3) {
+    case "0":
+        userInputOpdracht3 = 'Je koos' + ' ' + departments[userInputOpdracht2].jobs[0].title +'.' + ' ' + 'Een uitdagende rol!' + ' ' +  departments[userInputOpdracht2].jobs[0].description;
+        break;
+    case "1":
+        userInputOpdracht3 = 'Je koos' + ' ' + departments[userInputOpdracht2].jobs[1].title +'.' + ' ' + 'Een uitdagende rol!' + ' ' +  departments[userInputOpdracht2].jobs[1].description;
+        break;
+    case "2":
+        userInputOpdracht3 = 'Je koos' + ' ' + departments[userInputOpdracht2].jobs[2].title +'.' + ' ' + 'Een uitdagende rol!' + ' ' +  departments[userInputOpdracht2].jobs[2].description;
+        break;
+    case "3":
+        userInputOpdracht3 = 'Je koos' + ' ' + departments[userInputOpdracht2].jobs[3].title +'.' + ' ' + 'Een uitdagende rol!' + ' ' +  departments[userInputOpdracht2].jobs[3].description;
+        break;
+    default:
+        console.error('Hmm, ik heb geen geldige keuze van je ontvangen. Klopt dat? Probeer anders maar even opnieuw door de pagina te verversen')
+}
+console.log(userInputOpdracht3)
+console.log('End of switch for opdracht3')
+
+
+
+//opdracht4a
+console.log(userInputOpdracht2 + ' ' + 'is een leuke afdeling om te werken. Er werken op dit moment' + ' ' + departments[userInputOpdracht2].numberOfEmployees + ' ' +  'medewerkers.')
+
+//opdracht4b
+//uitwerking in de code hierboven
+
+
+
+console.log('End of script!')
